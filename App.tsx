@@ -7,6 +7,7 @@ import Offers from './src/Screens/Offers'
 import Buy from './src/Screens/Buy'
 import Credit from './src/Screens/Credit'
 import Sure from './src/Screens/Sure'
+import SafeList from './src/Screens/SafeLists';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -19,7 +20,7 @@ const App = () => {
           <Tab.Screen name="Ofertas" component={Offers} />
           <Tab.Screen name="Comprar" component={Buy} />
           <Tab.Screen name="Credit" component={Credit} />
-          <Tab.Screen name="sure" component={Sure} />
+          <Tab.Screen name="sure" component={SafeList} />
         </Tab.Navigator>
       </NavigationContainer>
     </PaperProvider>
