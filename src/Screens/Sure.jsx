@@ -2,11 +2,7 @@ import React from 'react';
 import { View,StyleSheet } from 'react-native';
 import { Text,Button } from 'react-native-paper';
 
-const Sure = ({ name, description, worth, setSelectedSeguro, openModal }) => {
-  const handleSeguroClick = ({name, description, worth}) => { 
-    setSelectedSeguro({name, description, worth});
-    openModal();
-  }
+
   return (
     <View style={styles.seguroContainer}>
       <Text style={styles.nombre}>{name}</Text>
