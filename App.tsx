@@ -7,6 +7,7 @@ import Offers from './src/Screens/Offers'
 import Buy from './src/Screens/Buy'
 import Credit from './src/Screens/Credit'
 import Sure from './src/Screens/Sure'
+import AboutUs from './src/Screens/AboutUs';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -15,11 +16,12 @@ const App = () => {
     <PaperProvider >
       <NavigationContainer>
         <Tab.Navigator >
-          <Tab.Screen name="Inicio" component={Home} />
-          <Tab.Screen name="Ofertas" component={Offers} />
-          <Tab.Screen name="Comprar" component={Buy} />
+          <Tab.Screen name="Home" component={Home} />
+          <Tab.Screen name="Offfers" component={Offers} />
+          <Tab.Screen name="Buy" component={Buy} />
           <Tab.Screen name="Credit" component={Credit} />
-          <Tab.Screen name="sure" component={Sure} />
+          <Tab.Screen name="Sure" component={Sure} />
+          <Tab.Screen name="AboutUS" component={AboutUs} />
         </Tab.Navigator>
       </NavigationContainer>
     </PaperProvider>
