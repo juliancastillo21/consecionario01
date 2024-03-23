@@ -38,7 +38,7 @@ const Offers = () => {
       <FlatList
         data={offers}
         renderItem={renderOffers}
-        keyExtractor={offers => offers.idOffers.toString} />
+        keyExtractor={(item, index) => index.toString()}/>
     </View>
   );
 };
