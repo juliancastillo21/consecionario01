@@ -6,19 +6,19 @@ import Sure from './Sure';
 
 const SafeList = () => {
   const navigation = useNavigation(); 
-  const [modalVisible, setModalVisible] = useState(false);
-  const [selectedSeguro, setSelectedSeguro] = useState(null);
+  const [modalVisible, setModal] = useState(false);
+  const [selectedSure, setSelectedSure] = useState(null);
 
-  const Modalinicio = () => {
-    setModalVisible(true);
+  const ModalHome = () => {
+    setModal(true);
   };
 
-  const Modalcerado = () => {
-    setSelectedSeguro(null)
-    setModalVisible(false);
+  const Modalclose = () => {
+    setSelectedSure(null)
+    setModal(false);
   };
 
-  const [seguros, setSeguros] = useState([
+  const [insurance] = useState([
     {
       name: "Seguro Básico",
       description: "Cubre daños a terceros y robo del vehículo.",
@@ -42,8 +42,8 @@ const SafeList = () => {
       <Text>
         comprar tu seguro para carros
       </Text>
-      {seguros.map((sure) => (
-        <Sure name={sure.nombre} description={sure.description} worth={sure.worth} setSelectedSeguro={setSelectedSeguro} openModal={Modalinicio}/>
+      {insurance.map((sure) => (
+        <Sure name={sure.name} description={sure.description} worth={sure.worth} setSelectedSure={setSelectedSure} openModal={ModalHome}/>
       ))}
        <Modal
         visible={modalVisible}
@@ -51,11 +51,11 @@ const SafeList = () => {
         <View style={styles.modalContainer}>
           <Text style={styles.modalTitle}>Seguro escogido:</Text>
           <View style={styles.container}>
-          <Text style={styles.text}>{selectedSeguro?.name}</Text>
-          <Text style={styles.text}>{selectedSeguro?.description}</Text>
-          <Text style={styles.text}>{selectedSeguro?.worth}</Text>
+          <Text style={styles.text}>{selectedSure?.name}</Text>
+          <Text style={styles.text}>{selectedSure?.description}</Text>
+          <Text style={styles.text}>{selectedSure?.worth}</Text>
           </View>
-          <Button mode="contained" onPress={() => Modalcerado()}  style={styles.button}>
+          <Button mode="contained" onPress={() => Modalclose()}  style={styles.button}>
            Gracias, cerrar.
           </Button>
         </View>

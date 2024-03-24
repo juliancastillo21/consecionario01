@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Image } from 'rea
 
 const AboutUs = ({ navigation }) => {
   const GoBack = () => {
-    navigation.navigate('Inicio');
+    navigation.navigate('Home');
   };
 
   return (

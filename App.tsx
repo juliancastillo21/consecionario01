@@ -6,8 +6,8 @@ import Home from './src/Screens/Home'
 import Offers from './src/Screens/Offers'
 import Buy from './src/Screens/Buy'
 import Credit from './src/Screens/Credit'
-import Sure from './src/Screens/Sure'
-
+import SafeLists from './src/Screens/SafeLists'
+import AboutUs from './src/Screens/AboutUs';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -17,10 +17,11 @@ const App = () => {
       <NavigationContainer>
         <Tab.Navigator >
           <Tab.Screen name="Home" component={Home} />
-          <Tab.Screen name="Offfers" component={Offers} />
+          <Tab.Screen name="Offer" component={Offers} />
           <Tab.Screen name="Buy" component={Buy} />
           <Tab.Screen name="Credit" component={Credit} />
-          
+          <Tab.Screen name="Sure" component={SafeLists} />
+          <Tab.Screen name="Us" component={AboutUs} />
         </Tab.Navigator>
       </NavigationContainer>
     </PaperProvider>

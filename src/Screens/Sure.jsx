@@ -2,12 +2,17 @@ import React from 'react';
 import { View,StyleSheet } from 'react-native';
 import { Text,Button } from 'react-native-paper';
 
+const Sure = ({ name, description, worth, setSelectedSure, openModal }) => {
+  const handleSeguroClick = ({name, description, worth}) => { 
+    setSelectedSure({name, description, worth});
+    openModal();
+  }
 
   return (
     <View style={styles.seguroContainer}>
-      <Text style={styles.nombre}>{name}</Text>
-      <Text style={styles.descripcion}>{description}</Text>
-      <Text style={styles.valor}>Valor: $ {worth}</Text>
+      <Text style={styles.name}>{name}</Text>
+      <Text style={styles.description}>{description}</Text>
+      <Text style={styles.worth}>Valor: $ {worth}</Text>
       <Button onPress={() => handleSeguroClick({name, description, worth})}>Seleccionar</Button>
     </View>
   );
@@ -28,16 +33,16 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-  nombre: {
+  name: {
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 10,
   },
-  descripcion: {
+  description: {
     fontSize: 16,
     marginBottom: 10,
   },
-  valor: {
+  worth: {
     fontSize: 18,
     fontWeight: 'bold',
   },

@@ -4,6 +4,7 @@ import { Text, TextInput, Button } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import Catalogue from './Catalogue';
 
+
 const Home = () => {
   const navigation = useNavigation(); 
 
@@ -14,11 +15,9 @@ const Home = () => {
         label="Buscar..."
         style={styles.entradaBusqueda}
       />
-
       <Catalogue/>
-
       {navigation && (
-        <Button mode="contained" onPress={() => navigation.navigate('Offers')}>
+        <Button mode="contained" onPress={() => navigation.navigate('Offer')}>
           Ir a la Siguiente Pantalla
         </Button>
       )}
