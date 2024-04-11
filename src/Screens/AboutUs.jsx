@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Image } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
+import { Button } from 'react-native-paper';
 
 const AboutUs = ({ navigation }) => {
   const GoBack = () => {
@@ -10,9 +11,9 @@ const AboutUs = ({ navigation }) => {
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Sobre Nosotros</Text>
       
-      <TouchableOpacity style={styles.backButton} onPress={GoBack}>
+      <Button  mode="contained" onPress={GoBack}>
         <Text style={styles.backButtonText}>Ir Al Inicio</Text>
-      </TouchableOpacity>
+      </Button>
       
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Misión:</Text>
@@ -78,6 +79,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   sectionTitle: {
+    padding:7,
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 10,

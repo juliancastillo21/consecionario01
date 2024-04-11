@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {View, Modal} from 'react-native';
+import {View, Modal,ScrollView} from 'react-native';
 import { StyleSheet,Image,Text } from 'react-native'
 import { Button, TextInput } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
@@ -22,7 +22,7 @@ const Buy = ({route}) => {
 
   const navigateToInsurance = () => {
     Modalclose()
-    navigation.navigate('Seguro');
+    navigation.navigate('Sure');
   };
 
   
@@ -31,6 +31,7 @@ const Buy = ({route}) => {
     price,
     name } = route?.params;
   return (
+    <ScrollView>
     <View>
     <View style={styles.container}>
         <Text>
@@ -62,8 +63,7 @@ const Buy = ({route}) => {
         style={styles.input}
       /> 
       <Button icon="" mode="contained" onPress={() =>Modalhome()}>Comprar    </Button>
-
-          </View>
+      </View>
          
     </View>
     <Modal
@@ -83,6 +83,7 @@ const Buy = ({route}) => {
         </View>
       </Modal>
     </View>
+    </ScrollView>
   )
 }
 
