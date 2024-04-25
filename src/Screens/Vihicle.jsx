@@ -3,7 +3,7 @@ import Seemore from './Seemore';
 import { StyleSheet, View,Image,Text } from 'react-native'
 import { Button } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
-
+import firebase from 'firebase/compat/app';
 
 const Vehicle = ({urlImagen,description,price,name,onShowMore}) => {
   const navigation = useNavigation(); 
@@ -15,7 +15,9 @@ const Vehicle = ({urlImagen,description,price,name,onShowMore}) => {
       price,
       name
     });
+    console.log(firebase)
   }
+
   return (
     <View style={styles.container}>
         <Image
