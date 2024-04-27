@@ -10,6 +10,7 @@ import Credit from './src/Screens/Credit'
 import SafeLists from './src/Screens/SafeLists'
 import AboutUs from './src/Screens/AboutUs';
 
+
 import FirebaseState from './context/firebase/firebaseState';
 
 const Tab = createMaterialTopTabNavigator();
