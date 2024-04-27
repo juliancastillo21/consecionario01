@@ -19,8 +19,8 @@ yarn start
 ```
 
 ## Step 2: Start your Application
-
-las dependencias que necesita este aplicativo son 
+```bash
+#las dependencias que necesita este aplicativo son 
 npm install @react-navigation/native
 npm install @react-navigation/stack
 npm install --save react-native-gesture-handler
@@ -33,4 +33,6 @@ npm install @react-navigation/native-stack
 npm install @react-navigation/material-top-tabs
 npm install react-native-pager-view
 npm i firebase
+
+```
 
